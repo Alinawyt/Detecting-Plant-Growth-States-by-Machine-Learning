@@ -12,4 +12,4 @@ ESP4EYE Camera Development Board
 
 Planting lettuce and use it to test
 
-https://alinawyt.github.io/Detecting-Plant-Growth-States-by-Machine-Learning/Database and Lettuce Selection.htm
+https://alinawyt.github.io/Detecting-Plant-Growth-States-by-Machine-Learning/Database_Selection.htm
