@@ -11,3 +11,5 @@ Choose a variety of lettuce (one that can buy seeds)
 ESP4EYE Camera Development Board
 
 Planting lettuce and use it to test
+
+https://alinawyt.github.io/Detecting-Plant-Growth-States-by-Machine-Learning/Database and Lettuce Selection.htm
