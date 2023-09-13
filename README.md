@@ -7,5 +7,7 @@ Detecting plant growth stages
 3. Mature stage： (multiple, single) ML?
 
 Choose a variety of lettuce (one that can buy seeds)
+
 ESP4EYE Camera Development Board
+
 Planting lettuce and use it to test
