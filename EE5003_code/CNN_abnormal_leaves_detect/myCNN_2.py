@@ -93,23 +93,3 @@ if __name__ == '__main__':
     model_path = os.path.join(PROJECT_PATH, "Detect_abnormal_leaves.pth")
     torch.save(model.state_dict(), model_path)
     print('CNN model saved as Detect_abnormal_leaves.pth!')
-
-    # Evaluate the model
-    model.eval() # 评估模式
-    correct = 0
-    total = 0
-    predictions = []
-    true_labels = []
-    with torch.no_grad():
-        for inputs, labels in test_dataloader:
-            outputs = model(inputs)
-            _, predicted = torch.max(outputs.data, 1)
-            total += labels.size(0)
-            # print(f"predicted:{predicted}\n")
-            # print(f"labels:{labels}\n")
-            correct += (predicted == labels).sum().item()
-            predictions.extend(predicted.cpu().numpy())
-            true_labels.extend(labels.cpu().numpy())
-
-    accuracy = correct / total
-    print(f'Final Classification Accuracy: {accuracy * 100:.2f}%')

@@ -17,7 +17,6 @@ DATA_TRAIN = os.path.join(PROJECT_PATH, "Lettuce_Growth_Stages_Database/train_fi
 DATA_TEST = os.path.join(PROJECT_PATH, "Lettuce_Growth_Stages_Database/test_filter")
 # DATA_TRAIN = os.path.join(PROJECT_PATH, "CNN_database/train")
 # DATA_TEST = os.path.join(PROJECT_PATH, "CNN_database/test")
-# DATA_MODEL = os.path.join(PROJECT_PATH, "CNN_database/model")
 
 class Net(nn.Module):
     # number of nodes: 20-50-500-26

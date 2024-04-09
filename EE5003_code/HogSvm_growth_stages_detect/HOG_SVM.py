@@ -5,8 +5,6 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 import joblib
 
-# PosNum = 8*11
-# NegNum = 8*11
 pos_list = []
 neg_list = []
 other_list = []
@@ -73,27 +71,10 @@ computeHOGs(pos_list + neg_list + other_list, gradient_list, hog_win_size)
 # # Save SVM model
 # svm.save("svm_model.xml")
 # print('SVM model saved as svm_model.xml!')
-# 创建 SVM 分类器
 
 svm_classifier = SVC(kernel='linear', C=1.0)
 
-# 在训练集上训练 SVM 分类器
+# svm_classifier fit
 svm_classifier.fit(np.array(gradient_list), np.array(labels))
 joblib.dump(svm_classifier, 'SVM_Detect_growth_stages.pkl')
 print('SVM model saved as SVM_Detect_growth_stages.pkl!')
-# # 获取测试集上的决策函数输出值
-# decision_values = svm_classifier.decision_function(X_test)
-# print(decision_values)
-# # 取每个样本中最大的输出值作为置信度分数
-# confidence_scores = np.max(decision_values, axis=1)
-
-# # 显示置信度分数
-# for i, confidence_score in enumerate(confidence_scores):
-#     print('Confidence Score for Sample {}: {:.2f}'.format(i, confidence_score))
-
-# # 在测试集上进行预测
-# y_pred = svm_classifier.predict(X_test)
-# print('y_pred:', y_pred)
-# # 计算准确率
-# accuracy = accuracy_score(y_test, y_pred)
-# print('Accuracy:', accuracy)
